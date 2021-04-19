@@ -1,38 +1,238 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+
+.searchBox{
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.btnPortion{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btnPortion button{
+  width: 80px;
+  margin-left: 20px;
+  padding: 10px;
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid #706f6f;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.searchBox input{
+  width: 350px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border: 1px solid #706f6f;
+  border-radius: 30px;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.displayAsGrid{
+  border: 1px solid #27aedb;
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-radius: 30px;
+  box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-webkit-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-moz-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+}
+
+.grids{
+  border: 1px solid coral;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 20px;
+  height: 500px;
+}
+
+.grids:hover{
+  box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-webkit-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-moz-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+}
+
+.grids_img{
+  width: 150px;
+  height: 150px;
+}
+
+.grids_details{
+  width: 80%;
+  /* border: 1px solid cadetblue; */
+  margin: 20px auto;
+}
+
+.grids_title{
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 20px 5px;
+}
+
+.grids_auther{
+  margin: 10px auto;
+  text-transform: capitalize;
+  line-height: 10px;
+}
+
+.grids_btn{
+  width: 30%;
+  outline: none;
+  border: 1px solid rgb(83, 81, 81);
+  margin: 20px 0; 
+  border-radius: 20px;
+}
+
+.displayAsList{
+  border: 1px solid #27aedb;
+  width: 50%;
+  /* height: 500px; */
+  margin:  20px auto;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-webkit-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-moz-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+}
+
+.lists{
+  border: 1px solid coral;
+  margin: 20px 10px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px;
+  border-radius: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.lists:hover{
+  box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-webkit-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
+-moz-box-shadow: -1px 4px 17px 6px rgba(128,124,124,0.75);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.list_title{
+  font-size: 30px;
+  width: 60%;
+  margin: 20px auto;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.list_auther{
+  width: 60%;
+  margin: 10px auto;
+  text-transform: capitalize;
+  line-height: 10px;
+}
+
+.list_img{
+  width: 300px;
+
+  /* margin-left: 50px; */
+}
+
+
+.list_btn{
+  width: 30%;
+  outline: none;
+  border: 1px solid rgb(83, 81, 81);
+  margin: 20px 0; 
+  border-radius: 20px;
+}
+
+.list_details{
+  width: 400px;
+  /* border-left: 1px solid cadetblue; */
+  margin-left: 50px;
+  text-align: center;
+}
+
+.darkMode{
+  background-color: #222;
+  color: azure;
+}
+
+.lightMode{
+  background-color: azure;
+  color: #222;
+}
+
+
+
+/* @media screen and (max-width:600) */
+@media only screen and (max-width : 900px) {
+  .displayAsGrid{
+    grid-template-columns: repeat(2,1fr);
   }
-  to {
-    transform: rotate(360deg);
+
+  .grids_img{
+    width: 100px;
+  }
+
+  .displayAsList{
+    border: 1px solid #27aedb;
+    width: 80%;
+    margin:  20px auto;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .displayAsGrid{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .grids{
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .grids_img{
+    width: 100px;
+  }
+
+  .searchBox input{
+    width: 250px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border: 1px solid #706f6f;
+    border-radius: 30px;  
+  }
+
+  .displayAsList{
+    border: 1px solid #27aedb;
+    width: 95%;
+    margin:  20px auto;
+  }
+
+  .lists{
+    flex-direction: column;
+  }
+  
+  .list_title{
+    font-size: 20px;
+    width: 60%;
+    margin: 20px auto;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  .list_details{
+    width: 90%;
+    margin: 20px auto;
+    /* margin-top: 200px; */
+  }
+
+  .list_img{
+    width: 150px;
+    margin: 10px auto;
   }
 }
